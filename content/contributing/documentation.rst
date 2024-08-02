@@ -8,73 +8,70 @@ Documentation
    :titlesonly:
 
    documentation/content_guidelines
-   documentation/rst_cheat_sheet
    documentation/rst_guidelines
 
-This introductory guide will help you acquire the tools and knowledge you need to write
-documentation, whether you plan to make a minor content change or document an application from
-scratch.
+This introductory guide will help you acquire the tools and knowledge you need to contribute to the
+documentation.
+
+Read the :ref:`introduction to the reStructuredText language <contributing-rst-intro>`
+if you are not familiar with it. Then, you have two courses of action to start contributing to the
+documentation:
+
+- **For minor changes**, such as adding a paragraph or fixing a typo, we recommend **using the
+  GitHub interface**. This is the easiest and fastest way to submit your changes, and it is suitable
+  for non-technical people. Jump directly to the
+  :ref:`contributing-documentation-first-contribution` section to get started.
+- **For more complex changes**, such as adding a new page, it is necessary to **use Git** and work
+  from a local copy of the documentation. Follow the instructions in the
+  :ref:`contributing-documentation-setup` section first to prepare your environment.
 
 .. seealso::
    :doc:`Discover other ways to contribute to Odoo <../contributing>`
 
-Read the :ref:`introduction to the reStructuredText language <contributing/documentation/rst-intro>`
-if you are not familiar with it. Then, you have two courses of action to start contributing to the
-documentation, depending on whether you want to propose minor changes to existing content or you
-instead want to work on significant changes to new and existing content.
-
-- **For minor changes**, for example, adding a paragraph or fixing a typo, we recommend **using the
-  GitHub interface**. This is the easiest and fastest way to submit your changes, and it is suitable
-  for non-technical people. Jump directly to the
-  :ref:`contributing/documentation/first-contribution` section to get started.
-- **For more complex changes**, it is necessary to **use Git** and work from a local copy of the
-  documentation. Follow the instructions in the :ref:`contributing/documentation/setup` section to
-  first prepare your environment.
-
-.. _contributing/documentation/rst-intro:
+.. _contributing-rst-intro:
 
 reStructuredText (RST)
 ======================
 
 The documentation is written in **reStructuredText** (RST), a `lightweight markup language
 <https://en.wikipedia.org/wiki/Lightweight_markup_language>`_ consisting of regular text augmented
-with markup, which allows including headings, images, notes, and so on. This might seem a bit
-abstract, but there is no need to worry; :abbr:`RST (reStructuredText)` is not hard to learn,
-especially if you intend to make minor changes to the content.
-
-If you need to learn about a specific markup, head over to our :doc:`cheat sheet for RST
-<documentation/rst_cheat_sheet>`; it contains all the information you should ever need for the
-documentation of Odoo.
+with markup, which allows including headings, images, notes, and so on. :abbr:`RST
+(reStructuredText)` is easy to use, even if you are not familiar with it.
 
 .. important::
-   We kindly ask you to observe a set of :doc:`content <documentation/content_guidelines>` and
+   Be mindful of our :doc:`content <documentation/content_guidelines>` and
    :doc:`RST <documentation/rst_guidelines>` guidelines as you write documentation. This ensures
    that you stay consistent with the rest of the documentation and facilitates the approval of your
    content changes as the Odoo team reviews them.
 
-.. seealso::
-   - :doc:`documentation/content_guidelines`
-   - :doc:`documentation/rst_cheat_sheet`
-   - :doc:`documentation/rst_guidelines`
-
-.. _contributing/documentation/setup:
+.. _contributing-documentation-setup:
 
 Environment setup
 =================
 
 The instructions below help you prepare your environment for making local changes to the
 documentation and then push them to GitHub. Skip this section and go to
-:ref:`contributing/documentation/first-contribution` if you have already completed this step or want
+:ref:`contributing-documentation-first-contribution` if you have already completed this step or want
 to make changes from the GitHub interface.
 
-#. .. include:: create_github_account.rst
-#. .. include:: configure_github_account.rst
+#. First, you need to `create a GitHub account <https://github.com/join>`_. Odoo uses GitHub to
+   manage the source code of its products, and this is where you will make your changes and submit
+   them for review.
+#. `Generate a new SSH key and register it on your GitHub account
+   <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>`_.
 #. Go to `github.com/odoo/documentation <https://github.com/odoo/documentation>`_ and click on the
    :guilabel:`Fork` button in the top right corner to create a fork (:dfn:`your own copy`) of the
    repository on your account. This creates a copy of the codebase to which you can make changes
    without affecting the main codebase. Skip this step if you work at Odoo.
 #. .. include:: install_git.rst
-#. .. include:: configure_git_authorship.rst
+#. Configure Git to identify yourself as the author of your future contributions. Enter the same
+   email address you used to register on GitHub.
+
+   .. code-block:: console
+
+      $ git config --global user.name "Your Name"
+      $ git config --global user.email "youremail@example.com"
+
 #. Clone the sources with Git and navigate into the local repository.
 
    .. code-block:: console
@@ -150,17 +147,20 @@ to make changes from the GitHub interface.
 
 #. `Install pngquant <https://pngquant.org/>`_.
 #. That's it! You are ready to :ref:`make your first contribution
-   <contributing/documentation/first-contribution>` with Git.
+   <contributing-documentation-first-contribution>` with Git.
 
-.. _contributing/documentation/first-contribution:
+.. _contributing-documentation-first-contribution:
 
-Make your first contribution
-============================
+Contributing to the documentation
+=================================
 
 .. tabs::
 
    .. tab:: Contribute from the GitHub interface
-      #. .. include:: create_github_account.rst
+
+      #. First, you need to `create a GitHub account <https://github.com/join>`_. Odoo uses GitHub to
+         manage the source code of its products, and this is where you will make your changes and submit
+         them for review.
       #. Verify that you are browsing the documentation in the version that you intend to change.
          The version can be selected from the dropdown in the top menu.
       #. Head to the page that you want to change and click on the :guilabel:`Edit on GitHub` button
@@ -194,9 +194,14 @@ Make your first contribution
          Odoo.
       #. Review the summary that you wrote about your changes and click on the :guilabel:`Create
          pull request` button again.
-      #. .. include:: check_mergeability_status.rst
-      #. .. include:: handle_reviews.rst
-      #. .. include:: documentation/changes_approved.rst
+      #. At the bottom of the page, check the mergeability status and address any issues.
+      #. As soon as your :abbr:`PR (Pull Request)` is ready for merging, a member of the Odoo team
+         is automatically assigned for review. If the reviewer has questions or remarks, they will
+         post them as comments and you will be notified by email. Those comments must be resolved
+         for the contribution to go forward.
+
+      #. Once your changes are approved, the reviewer merges them and they appear online the next
+         day.
 
    .. tab:: Contribute with Git
 
@@ -285,6 +290,10 @@ Make your first contribution
             Odoo.
          #. Complete the description and click on the :guilabel:`Create pull request` button again.
 
-      #. .. include:: check_mergeability_status.rst
-      #. .. include:: handle_reviews.rst
-      #. .. include:: documentation/changes_approved.rst
+      #. At the bottom of the page, check the mergeability status and address any issues.
+      #. As soon as your :abbr:`PR (Pull Request)` is ready for merging, a member of the Odoo team
+         is automatically assigned for review. If the reviewer has questions or remarks, they will
+         post them as comments and you will be notified by email. Those comments must be resolved
+         for the contribution to go forward.
+      #. Once your changes are approved, the reviewer merges them and they appear online the next
+         day.
