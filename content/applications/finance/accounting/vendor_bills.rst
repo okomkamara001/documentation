@@ -50,7 +50,6 @@ appropriately completed:
   <get_started/multi_currency>`.
 
 .. image:: vendor_bills/bill-completion.png
-   :align: center
    :alt: filling the vendor bill
 
 .. note::
@@ -75,7 +74,20 @@ Bill Payment
 Upon payment of the vendor bill, click on :guilabel:`Register Payment`. A new window pops up.
 
 Select the :guilabel:`Journal`, the :guilabel:`Payment Method`, the :guilabel:`Amount` you wish to
-pay (full or partial payment), and the :guilabel:`Currency`. Odoo fills the :guilabel:`Memo` field
+pay (full or partial payment), and the :guilabel:`Currency`. In the case of a partial payment (when
+the :guilabel:`Amount` paid is less than the total remaining amount on the vendor bill), the
+:guilabel:`Payment Difference` field displays the outstanding balance.
+You have two options:
+
+- :guilabel:`Keep open` : to keep the bill open and mark it with a :guilabel:`Partial` banner;
+- :guilabel:`Mark as fully paid`. In this case, select an account in the
+  :guilabel:`Post Difference In` field and change the :guilabel:`Label` if needed. Odoo will create
+  a journal entry balancing the account receivable with whichever account is selected.
+
+.. image:: vendor_bills/partial-payment.png
+   :alt: register a partial payment
+
+Odoo fills the :guilabel:`Memo` field
 automatically if the :guilabel:`Payment Reference` has been set correctly in the vendor bill. If
 the field is empty, we recommend you select the vendor invoice number as a reference.
 
