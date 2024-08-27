@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo version 18.0
+=================
+
+- Searching by name is now implemented as `_search_display_name` like all other fields `#174967 <https://github.com/odoo/odoo/pull/174967>`_.
+
+
 Odoo Online version 17.4
 ========================
 
