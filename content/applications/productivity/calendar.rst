@@ -44,7 +44,7 @@ in a CRM opportunity card or Project Task.
 From chatter, click on the :guilabel:`Activities` button. In the new :guilabel:`Schedule Acitivity`
 window, select :guilabel:`Activity Type`, which will populate a set of smart buttons depending on
 the activity. Activities that would involve other attendees' schedules like :guilabel:`Meeting` or
-:guilabel:`Call for Demo` will link to **Calendar** app.
+:guilabel:`Call for Demo` will link to the **Calendar** app.
 
 .. image:: calendar/calendar-chatter-activity-type-call-for-demo.png
    :align: center
@@ -66,8 +66,7 @@ date on the right calendar, then click the :guilabel:`Apply` button.
 
 Additional event information can also be configured:
 
-The :guilabel:`All Day` checkbox is ticked by default. For events with specific start and stop times
-, untick the box to enable time selection, which will automatically populate in the
+The :guilabel:`All Day` checkbox is ticked by default. For events with specific start and stop times, untick the box to enable time selection, which will automatically populate in the
 :guilabel:`Start` section.
 
 The signed-in user will auto-populate as the first attendee. Additional attendees can be added from
