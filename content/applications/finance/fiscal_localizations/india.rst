@@ -550,3 +550,64 @@ The :guilabel:`GSTR-3` report contains different sections:
 
    .. image:: india/gst-gstr-3-report.png
       :alt: GSTR-3 Report
+
+.. _india/tds-tcs-threshold:
+
+TDS/TCS Threshold alert
+=======================
+
+In Odoo, the **TDS (Tax Deducted at Source)** and **TCS (Tax Collected at Source)** features
+now include two types of threshold limits: :guilabel:`Per Transaction Limit` and :guilabel:`Aggregate Limit`.
+These limits determine when taxes should be applied to specific transactions.
+
+.. _india/per-transection-limit:
+
+**Per Transaction Limit**
+
+The per transaction limit is applied to every individual transaction. If a transaction
+exceeds this predefined limit, the relevant TDS/TCS section's tax must be applied.
+
+.. _india/aggregate-limit:
+
+**Aggregate Limit**
+
+The aggregate limit considers the total amount of all transactions within the fiscal year
+under any TDS/TCS section. If the aggregate limit is exceeded, the tax for the specific TDS/TCS
+section must be applied. The aggregate limit is further categorized into:
+
+#. :guilabel:`Fiscal Yearly Limit`: Considers all transactions throughout the fiscal year.
+#. :guilabel:`Monthly Limit`: Considers all transactions within a specific month.
+
+   .. image:: india/tds-section.png
+      :alt: TDS/TCS Section
+
+Configuration
+-------------
+
+#. **Configuring TDS/TCS Sections**
+
+   To use the TDS/TCS threshold limits, first configure the TDS/TCS sections within the Chart of Accounts in Odoo.
+
+   - Navigate to **Accounting > Configuration > Chart of Accounts**.
+      .. image:: india/tds-tcs-section-account-config.png
+         :alt: TDS/TCS Section configuration with CoA
+
+   - Select the relevant accounts at the time of creation of Bill/Invoice and assign the appropriate TDS/TCS sections.
+      .. image:: india/tds-tcs-account-invoice-config.png
+         :alt: configuration CoA with Invoice/Bill
+
+#. **Alerts on Invoice/Bill**
+
+   When a transaction exceeds either the Per Transaction Limit or the Aggregate Limit, an alert will be displayed
+   on the corresponding Invoice or Bill. The alert will indicate:
+
+   - Which section's limit has been exceeded.
+   - The TDS/TCS section under which the tax needs to be applied.
+
+   TDS Alert:
+      .. image:: india/tds-alert.png
+         :alt: TDS Alert
+
+   TCS Alert:
+      .. image:: india/tcs-alert.png
+         :alt: TCS Alert
