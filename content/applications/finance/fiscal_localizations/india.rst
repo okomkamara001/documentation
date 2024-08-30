@@ -46,6 +46,16 @@ localization:
 
 .. _india/e-invoicing:
 
+Indian Company Configuration
+============================
+
+Add the PAN number and GST number in the company form.
+
+.. image:: india/company-form.png
+   :alt: Company form
+
+If :guilabel:`PAN` number is not provided then it fetches the :guilabel:`PAN` number from :guilabel:`GSTIN` number.
+
 e-Invoice system
 ================
 
