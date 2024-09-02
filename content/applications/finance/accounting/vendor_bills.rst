@@ -80,7 +80,7 @@ the :guilabel:`Amount` paid is less than the total remaining amount on the vendo
 You have two options:
 
 - :guilabel:`Keep open`: to keep the bill open and mark it with a :guilabel:`Partial` banner;
-- :guilabel:`Mark as fully paid`. In this case, select an account in the
+- :guilabel:`Mark as fully paid`: In this case, select an account in the
   :guilabel:`Post Difference In` field and change the :guilabel:`Label` if needed. Odoo will create
   a journal entry balancing the account receivable with whichever account is selected.
 
