@@ -87,7 +87,9 @@ You have two options:
 .. image:: vendor_bills/partial-payment.png
    :alt: register a partial payment
 
-Odoo fills the :guilabel:`Memo` field
+Odoo fills the :guilabel:`Memo` field automatically if the :guilabel:`Payment Reference` has been
+set correctly in the vendor bill. If the field is empty, we recommend you select the vendor invoice
+number as a reference.
 automatically if the :guilabel:`Payment Reference` has been set correctly in the vendor bill. If
 the field is empty, we recommend you select the vendor invoice number as a reference.
 
