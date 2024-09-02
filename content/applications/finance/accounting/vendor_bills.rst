@@ -71,7 +71,7 @@ Click :guilabel:`Confirm` when the document is completed. The status of your doc
 Bill Payment
 ============
 
-Upon payment of the vendor bill, click on :guilabel:`Register Payment`. A new window pops up.
+Upon payment of the vendor bill, click on :guilabel:`Register Payment` to open a new payment window.
 
 Select the :guilabel:`Journal`, the :guilabel:`Payment Method`, the :guilabel:`Amount` you wish to
 pay (full or partial payment), and the :guilabel:`Currency`. In the case of a partial payment (when
